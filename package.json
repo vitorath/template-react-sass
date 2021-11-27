@@ -12,6 +12,12 @@
     "test:ci": "npm test -- --coverage",
     "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info "
   },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint 'src/**' --fix",
+      "npm run test:staged"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -38,6 +44,7 @@
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.3.1",
+    "lint-staged": "^12.1.2",
     "node-sass": "^6.0.1",
     "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
