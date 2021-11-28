@@ -3,3 +3,4 @@ public/js
 .husky/_
 .vscode
 .idea
+coverage
